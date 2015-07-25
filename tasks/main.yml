@@ -1,0 +1,14 @@
+---
+
+- name: Install ImageMagick (Debian)
+  apt: pkg=imagemagick
+  when: ansible_os_family == "Debian"
+  sudo: true
+
+- name: Install ImageMagick (RedHat)
+  yum: pkg={{ item }} state=installed
+  when: ansible_os_family == "RedHat"
+  sudo: true
+  with_items:
+    - ImageMagick
+    - ImageMagick-devel
