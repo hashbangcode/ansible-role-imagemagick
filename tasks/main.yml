@@ -5,7 +5,7 @@
   when: ansible_os_family == "Debian"
   sudo: true
 
-- name: Install ImageMagick (RedHat)
+- name: Install ImageMagick (Red Hat)
   yum: pkg={{ item }} state=installed
   when: ansible_os_family == "RedHat"
   sudo: true
