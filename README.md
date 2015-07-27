@@ -23,7 +23,7 @@ None.
 ```
 - hosts: servers
   roles:
-     - { role: danbohea.imagemagick }
+     - { role: hashbangcode.imagemagick }
 ```
 
 ## License
